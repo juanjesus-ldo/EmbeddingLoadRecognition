@@ -1,15 +1,12 @@
 # Few-Shot and Zero-Shot Object Detection for Industrial Lateral Loads
 
 > **WACV 2026 Submission**  
-> This repository contains the official implementation of the paper **"Few-Shot and Zero-Shot Object Detection for Industrial Lateral Loads"**.
 
 ---
 
 <div align="center">
-<b>Overview of our few-shot approach for pallet load recognition.</b>
-
-![few_shot_pipeline](./media/pipeline.jpg)
-
+<b>Overview of our few-shot approach for pallet load recognition.</b><br>
+<img src="./asset/few_shot_pipeline.jpg" alt="few_shot_pipeline.jpg" /><br><br>
 </div>
 
 ---
