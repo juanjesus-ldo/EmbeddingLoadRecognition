@@ -1,0 +1,13 @@
+
+cupy_cuda12x==13.5.0
+numpy==2.3.3
+opencv_python==4.11.0.86
+Pillow==11.3.0
+scikit_learn==1.7.2
+torch==2.7.1
+torchvision==0.22.1
+
+# Note:
+# - `cupy_cuda12x` is GPU/CUDA specific. If you don't have CUDA, remove or
+#   replace this line (e.g., omit CuPy or use a CPU-only alternative).
+# - Verify `torch`/`torchvision` versions are compatible with your CUDA/toolkit.
