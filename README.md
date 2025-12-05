@@ -163,7 +163,7 @@ If you find this work useful, please cite our paper:
 
 ```bibtex
 @inproceedings{wacv2026submission,
-  title={Few-Shot and Zero-Shot Object Detection for Industrial Lateral Loads},
+  title={From Few-Shot to Zero-Shot Pallet Load Recognition: A Deployed Embedding-Based Vision System for Industrial Logistics},
   author={Losada del Olmo, Juan Jesús and Pardo Ballesteros, Emilio and López-de-Teruel, Pedro E. and Ruiz, Alberto},
   booktitle={IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
   year={2026}
