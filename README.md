@@ -1,19 +1,20 @@
-# Few-Shot and Zero-Shot Object Detection for Industrial Lateral Loads
+# From Few-Shot to Zero-Shot Pallet Load Recognition: A Deployed Embedding-Based Vision System for Industrial Logistics
 
 > **WACV 2026 Submission**  
 
 ---
 
 <div align="center">
-<b>Overview of our few-shot approach for pallet load recognition.</b><br>
-<img src="./asset/few_shot_pipeline.jpg" alt="few_shot_pipeline.jpg" /><br><br>
+  <b>Overview of our few-shot approach for pallet load recognition.</b>
+  <br><br> <img src="./assets/few_shot_pipeline.jpg" alt="few_shot_pipeline.jpg" />
+  <br>
 </div>
 
 ---
 
 ## 📋 Table of Contents
 
-- [Few-Shot and Zero-Shot Object Detection for Industrial Lateral Loads](#few-shot-and-zero-shot-object-detection-for-industrial-lateral-loads)
+- [From Few-Shot to Zero-Shot Pallet Load Recognition: A Deployed Embedding-Based Vision System for Industrial Logistics](#from-few-shot-to-zero-shot-pallet-load-recognition-a-deployed-embedding-based-vision-system-for-industrial-logistics)
   - [📋 Table of Contents](#-table-of-contents)
   - [📖 Introduction](#-introduction)
   - [💾 Dataset](#-dataset)
