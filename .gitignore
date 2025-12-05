@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.env
+.venv/
+env/
+venv/
+
+# macOS
+.DS_Store
+
+# PyTorch / model checkpoints
+*.pth
+*.pt
+*.ckpt
+*.model
+*.bin
+*.onnx
+
+# Data and embeddings
+data/
+datasets/
+*.npz
+mAP/input/
+
+# IDEs
+.vscode/
