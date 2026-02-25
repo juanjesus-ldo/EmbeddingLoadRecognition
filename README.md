@@ -173,3 +173,6 @@ If you find this work useful, please cite our paper:
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📩 Contact
+If you have questions or suggestions, you can contact me at `juanjesus.losada@um.es`.
