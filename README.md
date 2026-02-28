@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This project presents a computationally efficient approach for object detection in industrial environments, specifically focusing on lateral loads. We propose **Few-Shot** and **Zero-Shot** solutions that leverage state-of-the-art foundation models (DINOv2, DINOv3, CAPI, RADIO) to achieve high performance with minimal or no annotated data. Our work addresses the challenges of:
+This project presents a computationally efficient approach for object detection in industrial environments, specifically focusing on lateral loads. We propose **Few-Shot** and **Zero-Shot** solutions that leverage state-of-the-art foundation models (DINOv2, DINOv3, CAPI, and RADIO) to achieve high performance with minimal or no annotated data. Our work addresses the challenges of:
 - **Data Scarcity**: Reducing the annotated data requirement nearly to zero.
 - **Adaptability**: Quickly adapting to new object classes (e.g., different types of loads).
 - **Robustness**: Handling complex industrial backgrounds and occlusions.
@@ -29,7 +29,7 @@ The experiments in this paper were conducted using the *IndustrialLateralLoads* 
 
 - **Hugging Face Dataset**: [jjldo21/IndustrialLateralLoads](https://huggingface.co/datasets/jjldo21/IndustrialLateralLoads)
 
-This dataset contains images of various industrial loads in realistic warehouse settings, annotated with bounding boxes.
+This dataset contains annotated images of various industrial loads in realistic warehouse settings.
 
 ---
 
