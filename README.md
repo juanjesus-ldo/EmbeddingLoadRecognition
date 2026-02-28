@@ -1,53 +1,39 @@
 # From Few-Shot to Zero-Shot Pallet Load Recognition: A Deployed Embedding-Based Vision System for Industrial Logistics
 
-> **WACV 2026 Submission**  
+[![Paper](https://img.shields.io/badge/Paper-WACV_2026-blue?logo=readthedocs&logoColor=white)](https://openaccess.thecvf.com/content/WACV2026/papers/del_Olmo_From_Few-Shot_to_Zero-Shot_Pallet_Load_Recognition_A_Deployed_Embedding-Based_WACV_2026_paper.pdf) [![Dataset](https://img.shields.io/badge/Dataset-IndustrialLateralLoads-orange?logo=huggingface&logoColor=%23FFD21E)](https://huggingface.co/datasets/jjldo21/IndustrialLateralLoads)
 
 ---
 
+## Introduction
+
+This project presents a computationally efficient approach for object detection in industrial environments, specifically focusing on lateral loads. We propose **Few-Shot** and **Zero-Shot** solutions that leverage state-of-the-art foundation models (DINOv2, DINOv3, CAPI, RADIO) to achieve high performance with minimal or no annotated data. Our work addresses the challenges of:
+- **Data Scarcity**: Reducing the annotated data requirement nearly to zero.
+- **Adaptability**: Quickly adapting to new object classes (e.g., different types of loads).
+- **Robustness**: Handling complex industrial backgrounds and occlusions.
+
+---
+
+## Abstract
+
+Automated pallet load recognition is a critical task in industrial logistics, but the deployment of conventional deep learning systems is often unfeasible. Their reliance on large, manually annotated datasets creates a prohibitive bottleneck in terms of cost and time, especially in dynamic environments where product lines frequently change. To overcome this challenge, we introduce a highly flexible, dual-mode vision system built upon dense patch embeddings. Our primary, few-shot approach leverages features from the CAPI vision model to construct a compact memory bank from as little as a single labeled example per class. Classification is then performed via a simple yet highly effective $k$-nearest neighbor search. For annotation-free scenarios, we also propose a zero-shot mode that identifies the load by finding the rectangular region that minimizes intra-class feature variance. We demonstrate state-of-the-art performance on a new, challenging industrial dataset, where our few-shot method attains a $mAP_{50-95}$ over 90\% with only one support image per class. Additionally, the fully unsupervised approach achieves a notable $mAP_{50-95}$ of up to 75\%. The system's robustness and practical value were validated through its successful deployment in high-stakes, real-world scenarios. Our findings establish a basis for lightweight solutions that support the rapid, data-efficient integration of new vision systems into industrial workflows.
 <div align="center">
-  <b>Overview of our few-shot approach for pallet load recognition.</b>
-  <br><br> <img src="./assets/few_shot_pipeline.jpg" alt="few_shot_pipeline.jpg" />
-  <br>
+  <img src="./assets/few_shot_pipeline.jpg" alt="few_shot_pipeline.jpg" />
+  <br> <b>Overview of our few-shot approach for pallet load recognition.</b>
 </div>
 
 ---
 
-## 📋 Table of Contents
+## Dataset
 
-- [From Few-Shot to Zero-Shot Pallet Load Recognition: A Deployed Embedding-Based Vision System for Industrial Logistics](#from-few-shot-to-zero-shot-pallet-load-recognition-a-deployed-embedding-based-vision-system-for-industrial-logistics)
-  - [📋 Table of Contents](#-table-of-contents)
-  - [📖 Introduction](#-introduction)
-  - [💾 Dataset](#-dataset)
-  - [🛠️ Installation](#️-installation)
-  - [🚀 Usage](#-usage)
-    - [Few-Shot Method](#few-shot-method)
-    - [Zero-Shot Method](#zero-shot-method)
-    - [Baselines](#baselines)
-      - [Florence-2 (Zero-Shot)](#florence-2-zero-shot)
-      - [YOLOE (Visual Prompt)](#yoloe-visual-prompt)
-      - [YOLOE (Text Prompt)](#yoloe-text-prompt)
-  - [📊 Evaluation](#-evaluation)
-  - [📜 Citation](#-citation)
-  - [📄 License](#-license)
-
-## 📖 Introduction
-
-This project presents a novel approach for object detection in industrial environments, specifically focusing on lateral loads. We propose **Few-Shot** and **Zero-Shot** methodologies that leverage state-of-the-art foundation models (DINOv2, DINOv3, CAPI, RADIO) to achieve high performance with minimal or no annotated data.
-
-Our approach addresses the challenges of:
-- **Data Scarcity**: Reducing the need for large labeled datasets.
-- **Adaptability**: Quickly adapting to new object classes (e.g., different types of loads).
-- **Robustness**: Handling complex industrial backgrounds and occlusions.
-
-## 💾 Dataset
-
-The experiments in this paper were conducted using the **IndustrialLateralLoads** dataset.
+The experiments in this paper were conducted using the *IndustrialLateralLoads* dataset.
 
 - **Hugging Face Dataset**: [jjldo21/IndustrialLateralLoads](https://huggingface.co/datasets/jjldo21/IndustrialLateralLoads)
 
 This dataset contains images of various industrial loads in realistic warehouse settings, annotated with bounding boxes.
 
-## 🛠️ Installation
+---
+
+## Installation
 
 1.  **Clone the repository:**
     ```bash
@@ -60,8 +46,9 @@ This dataset contains images of various industrial loads in realistic warehouse 
     ```bash
     pip install -r requirements.txt
     ```
+---
 
-## 🚀 Usage
+## Usage
 
 The repository is organized into three main sections: `few_shot`, `zero_shot`, and `baselines`.
 
@@ -138,7 +125,9 @@ python3 baselines/yoloe/inference_text.py \
     --save_txt
 ```
 
-## 📊 Evaluation
+---
+
+## Evaluation
 
 To evaluate the performance of the detection models, we use the **Mean Average Precision (mAP)** metric.
 
@@ -156,23 +145,31 @@ We utilize the [Cartucho/mAP](https://github.com/Cartucho/mAP) repository for co
     ```bash
     python mAP/main.py
     ```
+    
+---
 
-## 📜 Citation
+## Citation
 
 If you find this work useful, please cite our paper:
 
 ```bibtex
-@inproceedings{wacv2026submission,
-  title={From Few-Shot to Zero-Shot Pallet Load Recognition: A Deployed Embedding-Based Vision System for Industrial Logistics},
-  author={Losada del Olmo, Juan Jesús and Pardo Ballesteros, Emilio and López-de-Teruel, Pedro E. and Ruiz, Alberto},
-  booktitle={IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
-  year={2026}
+@InProceedings{del_Olmo_2026_WACV,
+    author    = {del Olmo, Juan Jes\'us Losada and Ballesteros, Emilio Pardo and L\'opez-de-Teruel, Pedro E. and Ruiz, Alberto},
+    title     = {From Few-Shot to Zero-Shot Pallet Load Recognition: A Deployed Embedding-Based Vision System for Industrial Logistics},
+    booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+    month     = {March},
+    year      = {2026},
+    pages     = {2901-2911}
 }
 ```
 
-## 📄 License
+---
+
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📩 Contact
+---
+
+## Contact
 If you have questions or suggestions, you can contact me at `juanjesus.losada@um.es`.
